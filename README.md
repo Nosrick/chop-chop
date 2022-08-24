@@ -1,9 +1,5 @@
-# Fabric Example Mod
+# Chop Chop!
 
-## Setup
-
-For setup instructions please see the [fabric wiki page](https://fabricmc.net/wiki/tutorial:setup) that relates to the IDE that you are using.
-
-## License
-
-This template is available under the CC0 license. Feel free to learn from it and incorporate it in your own projects.
+## Overview
+This is a simple interactive cooking mod, expanding on the Minecraft cooking system to make it a little more interesting.
+If you don't like the idea of watching a frying pan, grinding flour, or your end-game goal is to move towards automation, this mod is not for you.
