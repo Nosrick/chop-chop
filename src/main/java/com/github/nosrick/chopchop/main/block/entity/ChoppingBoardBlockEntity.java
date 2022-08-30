@@ -1,8 +1,7 @@
-package com.github.nosrick.chopchop.block.entity;
+package com.github.nosrick.chopchop.main.block.entity;
 
-import com.github.nosrick.chopchop.util.SingleStackInventory;
+import com.github.nosrick.chopchop.main.util.SingleStackInventory;
 import net.minecraft.block.BlockState;
-import net.minecraft.inventory.Inventories;
 import net.minecraft.nbt.NbtCompound;
 import net.minecraft.util.math.BlockPos;
 

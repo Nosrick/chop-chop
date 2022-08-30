@@ -1,6 +1,6 @@
-package com.github.nosrick.chopchop.item;
+package com.github.nosrick.chopchop.main.item;
 
-import com.github.nosrick.chopchop.ChopChopMod;
+import com.github.nosrick.chopchop.main.ChopChopMod;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.minecraft.item.Item;
 import net.minecraft.util.registry.Registry;

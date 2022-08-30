@@ -1,6 +1,6 @@
-package com.github.nosrick.chopchop.block.entity;
+package com.github.nosrick.chopchop.main.block.entity;
 
-import com.github.nosrick.chopchop.util.BlockStateUtils;
+import com.github.nosrick.chopchop.main.util.BlockStateUtils;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.entity.BlockEntity;
 import net.minecraft.block.entity.BlockEntityType;

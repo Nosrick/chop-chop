@@ -1,4 +1,4 @@
-package com.github.nosrick.chopchop.block;
+package com.github.nosrick.chopchop.main.block;
 
 import net.minecraft.block.BlockState;
 import net.minecraft.block.BlockWithEntity;

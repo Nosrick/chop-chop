@@ -1,4 +1,4 @@
-package com.github.nosrick.chopchop.util;
+package com.github.nosrick.chopchop.main.util;
 
 @SuppressWarnings({"deprecation", "unused"})
 public abstract class BlockStateUtils {

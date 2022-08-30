@@ -19,7 +19,7 @@
   "environment": "*",
   "entrypoints": {
     "main": [
-      "com.github.nosrick.chopchop.ChopChopMod"
+      "com.github.nosrick.chopchop.main.ChopChopMod"
     ]
   },
   "mixins": [

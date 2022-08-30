@@ -1,13 +1,9 @@
-package com.github.nosrick.chopchop.block;
+package com.github.nosrick.chopchop.main.block;
 
-import com.github.nosrick.chopchop.ChopChopMod;
-import net.fabricmc.api.EnvType;
-import net.fabricmc.api.Environment;
-import net.fabricmc.fabric.api.blockrenderlayer.v1.BlockRenderLayerMap;
+import com.github.nosrick.chopchop.main.ChopChopMod;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
-import net.minecraft.client.render.RenderLayer;
 import net.minecraft.util.registry.Registry;
 
 import java.util.function.Supplier;
@@ -42,6 +38,10 @@ public enum BlockRegistry {
         return this.block;
     }
 
+    public boolean isCutout() {
+        return this.isCutout;
+    }
+
     public String getId() {
         return Registry.BLOCK.getId(this.get()).toString();
     }
@@ -50,15 +50,6 @@ public enum BlockRegistry {
         for (BlockRegistry value : values()) {
             Block block = value.get();
             Registry.register(Registry.BLOCK, ChopChopMod.getId(value.pathName), block);
-        }
-    }
-
-    @Environment(EnvType.CLIENT)
-    public static void registerRenderLayer() {
-        for (BlockRegistry value : values()) {
-            if (value.isCutout) {
-                BlockRenderLayerMap.INSTANCE.putBlock(value.get(), RenderLayer.getCutout());
-            }
         }
     }
 }
