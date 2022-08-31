@@ -1,6 +1,6 @@
-package com.github.nosrick.chopchop.main;
+package com.github.nosrick.chopchop;
 
-import com.github.nosrick.chopchop.main.item.ItemRegistry;
+import com.github.nosrick.chopchop.item.ItemRegistry;
 import net.fabricmc.api.ModInitializer;
 import net.fabricmc.fabric.api.client.itemgroup.FabricItemGroupBuilder;
 import net.minecraft.item.ItemGroup;

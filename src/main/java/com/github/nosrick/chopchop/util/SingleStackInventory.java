@@ -1,4 +1,4 @@
-package com.github.nosrick.chopchop.main.util;
+package com.github.nosrick.chopchop.util;
 
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.inventory.Inventories;

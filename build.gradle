@@ -69,7 +69,6 @@ dependencies {
 	modImplementation("com.terraformersmc:modmenu:${project.modmenu_version}")
 }
 
-/*
 loom {
 	splitEnvironmentSourceSets()
 
@@ -80,7 +79,6 @@ loom {
 		}
 	}
 }
- */
 
 processResources {
 	inputs.property "version", project.version

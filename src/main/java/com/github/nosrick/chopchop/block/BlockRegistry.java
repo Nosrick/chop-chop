@@ -1,6 +1,6 @@
-package com.github.nosrick.chopchop.main.block;
+package com.github.nosrick.chopchop.block;
 
-import com.github.nosrick.chopchop.main.ChopChopMod;
+import com.github.nosrick.chopchop.ChopChopMod;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
