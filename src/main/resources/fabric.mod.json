@@ -20,6 +20,12 @@
   "entrypoints": {
     "main": [
       "com.github.nosrick.chopchop.ChopChopMod"
+    ],
+    "client": [
+      "com.github.nosrick.chopchop.ChopChopClientMod"
+    ],
+    "fabric-datagen": [
+      "com.github.nosrick.chopchop.datagen.ChopChopDataGen"
     ]
   },
   "mixins": [

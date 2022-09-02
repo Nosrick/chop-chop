@@ -1,7 +1,8 @@
 package com.github.nosrick.chopchop.item;
 
 import com.github.nosrick.chopchop.ChopChopMod;
-import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
+import com.github.nosrick.chopchop.block.BlockRegistry;
+import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
 import net.minecraft.util.registry.Registry;
 
@@ -9,7 +10,8 @@ import java.util.function.Supplier;
 
 public enum ItemRegistry {
 
-    IRON_KNIFE("iron_knife", () -> new Item(new FabricItemSettings().maxCount(1).group(ChopChopMod.ITEM_GROUP)));
+    CHOPPING_BOARD("chopping_board", () -> new BlockItem(BlockRegistry.CHOPPING_BOARD.get(), ChopChopMod.DefaultItemSettings)),
+    IRON_KNIFE("iron_knife", () -> new Item(ChopChopMod.DefaultItemSettings.maxCount(1)));
 
     private Item item;
     private Supplier<Item> itemSupplier;

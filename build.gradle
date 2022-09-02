@@ -1,5 +1,5 @@
 plugins {
-	id 'fabric-loom' version '1.0-SNAPSHOT'
+	id 'fabric-loom' version '0.12-SNAPSHOT'
 	id 'maven-publish'
 }
 
@@ -70,12 +70,34 @@ dependencies {
 }
 
 loom {
+	/*
 	splitEnvironmentSourceSets()
 
 	mods {
 		chopchop {
 			sourceSet sourceSets.main
 			sourceSet sourceSets.client
+		}
+	}
+	 */
+
+	runs {
+		datagenClient {
+			inherit client
+			name "Data Generation"
+			vmArg "-Dfabric-api.datagen"
+			vmArg "-Dfabric.api.datagen.output-dir=${file("src/main/generated")}"
+			vmArg "-Dfabric.api.datagen.strict-validation"
+
+			runDir "build/datagen"
+		}
+	}
+}
+
+sourceSets {
+	main {
+		resources {
+			srcDirs += [ "src/main/generated" ]
 		}
 	}
 }

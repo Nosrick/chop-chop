@@ -1,8 +1,13 @@
 package com.github.nosrick.chopchop;
 
+import com.github.nosrick.chopchop.block.BlockRegistry;
+import com.github.nosrick.chopchop.block.entity.BlockEntityTypeRegistry;
 import com.github.nosrick.chopchop.item.ItemRegistry;
 import net.fabricmc.api.ModInitializer;
 import net.fabricmc.fabric.api.client.itemgroup.FabricItemGroupBuilder;
+import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
+import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
+import net.minecraft.block.Material;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.Items;
@@ -24,9 +29,13 @@ public class ChopChopMod implements ModInitializer {
 		return new Identifier(MOD_ID, name);
 	}
 
+	public static FabricItemSettings DefaultItemSettings = new FabricItemSettings().group(ITEM_GROUP);
+	public static FabricBlockSettings DefaultBlockSettings = FabricBlockSettings.of(Material.WOOD);
+
 	@Override
 	public void onInitialize() {
-
+		BlockRegistry.registerAll();
+		BlockEntityTypeRegistry.registerAll();
 		ItemRegistry.registerAll();
 	}
 }

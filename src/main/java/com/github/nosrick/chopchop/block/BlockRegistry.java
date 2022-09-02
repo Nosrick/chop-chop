@@ -10,7 +10,7 @@ import java.util.function.Supplier;
 
 public enum BlockRegistry {
 
-    CHOPPING_BOARD("chopping_board", () -> new ChoppingBoardBlock(FabricBlockSettings.copyOf(Blocks.OAK_LOG)), true);
+    CHOPPING_BOARD("chopping_board", ChoppingBoardBlock::new, true);
 
     protected final String pathName;
 
