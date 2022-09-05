@@ -1,9 +1,8 @@
-package com.github.nosrick.chopchop.block;
+package com.github.nosrick.chopchop.registry;
 
 import com.github.nosrick.chopchop.ChopChopMod;
-import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
+import com.github.nosrick.chopchop.block.ChoppingBoardBlock;
 import net.minecraft.block.Block;
-import net.minecraft.block.Blocks;
 import net.minecraft.util.registry.Registry;
 
 import java.util.function.Supplier;

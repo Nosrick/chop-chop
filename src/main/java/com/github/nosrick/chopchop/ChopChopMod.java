@@ -1,8 +1,8 @@
 package com.github.nosrick.chopchop;
 
-import com.github.nosrick.chopchop.block.BlockRegistry;
+import com.github.nosrick.chopchop.registry.BlockRegistry;
 import com.github.nosrick.chopchop.block.entity.BlockEntityTypeRegistry;
-import com.github.nosrick.chopchop.item.ItemRegistry;
+import com.github.nosrick.chopchop.registry.ItemRegistry;
 import net.fabricmc.api.ModInitializer;
 import net.fabricmc.fabric.api.client.itemgroup.FabricItemGroupBuilder;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;

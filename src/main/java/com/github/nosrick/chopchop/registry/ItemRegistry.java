@@ -1,7 +1,6 @@
-package com.github.nosrick.chopchop.item;
+package com.github.nosrick.chopchop.registry;
 
 import com.github.nosrick.chopchop.ChopChopMod;
-import com.github.nosrick.chopchop.block.BlockRegistry;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
 import net.minecraft.util.registry.Registry;

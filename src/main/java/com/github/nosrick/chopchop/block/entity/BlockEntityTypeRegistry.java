@@ -1,7 +1,7 @@
 package com.github.nosrick.chopchop.block.entity;
 
 import com.github.nosrick.chopchop.ChopChopMod;
-import com.github.nosrick.chopchop.block.BlockRegistry;
+import com.github.nosrick.chopchop.registry.BlockRegistry;
 import net.fabricmc.fabric.api.object.builder.v1.block.entity.FabricBlockEntityTypeBuilder;
 import net.minecraft.block.Block;
 import net.minecraft.block.entity.BlockEntity;
