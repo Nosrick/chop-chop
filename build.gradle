@@ -1,5 +1,5 @@
 plugins {
-	id 'fabric-loom' version '0.12-SNAPSHOT'
+	id 'fabric-loom' version '1.0-SNAPSHOT'
 	id 'maven-publish'
 }
 
@@ -14,6 +14,11 @@ repositories {
 	maven {
 		name = 'Curse Maven'
 		url = "https://www.cursemaven.com"
+	}
+
+	maven {
+		name = 'ARRP repo'
+		url = uri("https://storage.googleapis.com/devan-maven/")
 	}
 
 	maven {
@@ -67,40 +72,28 @@ dependencies {
 
 	//ModMenu
 	modImplementation("com.terraformersmc:modmenu:${project.modmenu_version}")
+
+	//ARRP
+	modImplementation("net.devtech:arrp:0.6.4")
 }
 
+def dataOutput = 'src/main/generated'
+
 loom {
-	/*
-	splitEnvironmentSourceSets()
-
-	mods {
-		chopchop {
-			sourceSet sourceSets.main
-			sourceSet sourceSets.client
-		}
-	}
-	 */
-
 	runs {
-		datagenClient {
-			inherit client
+		datagen {
+			server()
+
 			name "Data Generation"
 			vmArg "-Dfabric-api.datagen"
-			vmArg "-Dfabric.api.datagen.output-dir=${file("src/main/generated")}"
-			vmArg "-Dfabric.api.datagen.strict-validation"
+			vmArg "-Dfabric-api.datagen.output-dir=${file(dataOutput)}"
 
 			runDir "build/datagen"
 		}
 	}
 }
 
-sourceSets {
-	main {
-		resources {
-			srcDirs += [ "src/main/generated" ]
-		}
-	}
-}
+sourceSets { main { resources { srcDirs += dataOutput } } }
 
 processResources {
 	inputs.property "version", project.version
