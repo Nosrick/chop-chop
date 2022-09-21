@@ -36,6 +36,14 @@ public class ChoppingBoardBlockEntity extends SyncedBlockEntity {
         return ItemStack.EMPTY;
     }
 
+    public ItemStack getItemStack() {
+        if(!this.isEmpty()) {
+            return this.inventory.getStack(0);
+        }
+
+        return ItemStack.EMPTY;
+    }
+
     public boolean isEmpty() { return this.inventory.getStack(0).isEmpty(); }
 
     @Override

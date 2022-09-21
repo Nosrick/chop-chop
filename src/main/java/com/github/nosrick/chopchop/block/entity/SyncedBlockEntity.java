@@ -29,9 +29,10 @@ public class SyncedBlockEntity extends BlockEntity {
     }
 
     public void inventoryChanged() {
-        this.markDirty();
-        if (this.world != null) {
+        if (this.world != null && !this.world.isClient) {
            this.world.updateListeners(this.getPos(), this.getCachedState(), this.getCachedState(), BlockStateUtils.DEFAULT);
+           this.world.updateNeighborsAlways(this.getPos(), this.getCachedState().getBlock());
         }
+        this.markDirty();
     }
 }
