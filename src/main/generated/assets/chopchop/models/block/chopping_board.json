@@ -1,0 +1,6 @@
+{
+  "parent": "chopchop:block/chopping_board_template",
+  "textures": {
+    "all": "chopchop:block/chopping_board"
+  }
+}
