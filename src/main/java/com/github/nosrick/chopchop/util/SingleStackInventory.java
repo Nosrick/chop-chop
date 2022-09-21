@@ -108,7 +108,7 @@ public class SingleStackInventory implements SidedInventory {
         Inventories.readNbt(nbt, this.inventory);
     }
 
-    public NbtCompound writeNbt(NbtCompound nbt) {
-        return Inventories.writeNbt(nbt, this.inventory);
+    public NbtCompound writeNbt() {
+        return Inventories.writeNbt(new NbtCompound(), this.inventory);
     }
 }

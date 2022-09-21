@@ -17,13 +17,13 @@ public class ChoppingBoardBlockEntity extends SyncedBlockEntity {
     @Override
     public void readNbt(NbtCompound nbt) {
         super.readNbt(nbt);
-        //NbtCompound inventory = nbt.getCompound("Inventory");
-        //this.inventory.readNbt(inventory);
+        NbtCompound inventory = nbt.getCompound("Inventory");
+        this.inventory.readNbt(inventory);
     }
 
     @Override
     protected void writeNbt(NbtCompound nbt) {
         super.writeNbt(nbt);
-        //nbt.put("Inventory", this.inventory.writeNbt(nbt));
+        nbt.put("Inventory", this.inventory.writeNbt());
     }
 }
